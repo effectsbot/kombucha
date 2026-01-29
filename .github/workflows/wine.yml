@@ -1,10 +1,10 @@
 name: Build Wine
-on: [ workflow_dispatch, pull_request ]
+on: [ push, pull_request ]
 permissions:
   contents: write
   pull-requests: read
 env:
-  WINE_VERSION: "nightly"
+  WINE_VERSION: "11.0"
 jobs:
   build:
     runs-on: ubuntu-latest
