@@ -1,10 +1,10 @@
 name: Build Wine
-on: [ push, pull_request ]
+on: [ workflow_dispatch, pull_request ]
 permissions:
   contents: write
   pull-requests: read
 env:
-  WINE_VERSION: "11.0"
+  WINE_VERSION: "nightly"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,8 +21,7 @@ jobs:
       run: |
         echo "TAG=${{ env.WINE_VERSION }}+$(git rev-parse --short ${{ github.sha }})" >> $GITHUB_ENV
 
-        git clone https://gitlab.winehq.org/wine/wine.git --depth 1 \
-          --branch wine-${{ env.WINE_VERSION }}
+        git clone https://gitlab.winehq.org/wine/wine.git --depth 1
 
     - name: Apply patches
       run: |
