@@ -42,15 +42,27 @@ jobs:
           ccache \
           gettext \
           libasound2-dev \
+          libavcodec-dev \
+          libavformat-dev \
+          libcapi20-dev \
+          libcups2-dev \
           libfontconfig-dev \
           libfreetype-dev \
           libgl-dev \
           libgnutls28-dev \
+          libgphoto2-dev \
+          libgstreamer1.0-dev \
+          libgstreamer-plugins-base1.0-dev \
+          libkrb5-dev \
+          libpcap-dev \
+          libpcsclite-dev \
           libpulse-dev \
           libusb-1.0-0-dev \
           libudev-dev \
+          libsane-dev \
           libsdl2-dev \
           libunwind-dev \
+          libv4l-dev \
           libvulkan-dev \
           libwayland-dev \
           libx11-dev \
@@ -63,7 +75,9 @@ jobs:
           libxkbregistry-dev \
           libxrandr-dev \
           libxrender-dev \
-          mingw-w64
+          mingw-w64 \
+          ocl-icd-opencl-dev \
+          samba-dev
 
     - name: Configure ccache
       uses: hendrikmuhs/ccache-action@v1.2
