@@ -1,5 +1,5 @@
 name: Build Wine
-on: [ push, pull_request ]
+on: workflow_dispatch
 permissions:
   contents: write
   pull-requests: read
